@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bâtiment M1 - Université Lille 1</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="svg.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body ng-app="planM3" ng-controller="mainCtrl">
+    <!-- ===================  Définitions  =================== -->
+    <svg class="svgdefs">
+      <def>
+        <!-- porte simple -->
+        <g id="door" class="door">
+          <path d="M0 0 h 10" class="front"></path>
+          <path d="M0 0 l 0 10 q 10 0 10 -10" class="arc"></path>
+        </g>
+        <!-- porte double -->
+        <g id="door2" class="door">
+          <path d="M0 0 h 30" class="front"></path>
+          <path d="M15 0 l 2 15 q14 0 13 -15" class="arc"></path>
+          <path d="M15 0 l -2 15 q-14 0 -13 -15" class="arc"></path>
+        </g>
+        <!-- escalier simple -->
+        <g id="stairs" class="stairs" vector-effect="non-scaling-stroke">
+          <rect x="0" y="0" width="40" height="40"></rect>
+          <rect x="19" y="0" width="2" height="30" class="midline"></rect>
+          <path d="M2 30 l8 -30 l8 30 m4 -30 l8 30 l8 -30" class="updown"></path>
+          <path d="M0 10 h40 M0 20 h40 M0 30 h40"></path>
+        </g>
+        <!-- escalier double -->
+        <g id="stairs2" class="stairs" vector-effect="non-scaling-stroke">
+          <rect x="0" y="0" width="80" height="30"></rect>
+          <rect x="19" y="0" width="2" height="30" class="midline"></rect>
+          <rect x="59" y="0" width="2" height="30" class="midline"></rect>
+          <path d="M2 30 l8 -30 l8 30 m4-30 l18 30 l18 -30 m4 30 l8 -30 l8 30" class="updown"></path>
+          <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
+        </g>
+        <!-- escalier double montant -->
+        <g id="stairs3" class="stairs" vector-effect="non-scaling-stroke">
+          <rect x="0" y="0" width="80" height="40"></rect>
+          <path d="M2 30 l39 -30 l39 30" class="updown"></path>
+          <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
+        </g>
+      </def>
+    </svg>
+    <!-- ===================  3  =================== -->
+    <div ng-class="{hidden:search.maxFloor<3, insearch:seach.name, nothere:!search[3]}" class="floorcontainer">
+      <div class="floornumber"  ng-show="search.maxFloor==3">niveau 3</div>
+      <svg class="plan" viewBox="-5 -5 510 510">
+        <!-- les carrées principaux : étage 3 -->
+        <g class="guides">
+          <rect x="0" y="0" width="500" height="500"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+        </g>
+        <!-- les salless : étage 3 -->
+        <g class="rooms">
+          <g class="room" data-room-name="amphithéâtre Galois amphitheatre" data-room-floor="3">
+            <rect x="170" y="120" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="185">amphithéâtre<tspan x="285" dy="1em" class="main-name">Galois</tspan></text>
+            <use xlink:href="#door2" transform="translate(400 140) rotate(90)"></use>
+            <use xlink:href="#door2" transform="translate(400 200) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre Painleve" data-room-floor="3">
+            <rect x="170" y="250" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Painlevé</tspan></text>
+            <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
+            <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 304" data-room-floor="3">
+            <rect x="100" y="170" width="50" height="70"></rect>
+            <text class="room-name" x="125" y="205">salle<tspan x="125" dy="1em" class="main-name">304</tspan></text>
+            <use xlink:href="#door" transform="translate(150 190) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 302" data-room-floor="3">
+            <rect x="100" y="310" width="70" height="70"></rect>
+            <text class="room-name" x="135" y="345">salle<tspan x="135" dy="1em" class="main-name">302</tspan></text>
+            <use xlink:href="#door" transform="translate(165 310) scale(1 -1) rotate(180)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="3">
+            <rect x="320" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(335 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="3">
+            <rect x="360" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(375 410)"></use>
+          </g>
+        </g>
+        <!-- les partie non accessibless : étage 3 -->
+        <g class="useless">
+          <g class="room" data-room-name="">
+            <path d="M0 0 h500 v350 h-50 v-230 h-350 v260 h220 v120 h-320 z"></path>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="120" width="50" height="50"></rect>
+          </g>
+        </g>
+        <!-- les escaliers : étage 3 -->
+        <g class="stairs">
+          <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+          <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  2  =================== -->
+    <div ng-class="{hidden:search.maxFloor<2, insearch:seach.name, nothere:!search[2]}" class="floorcontainer">
+      <div class="floornumber"  ng-show="search.maxFloor==2">niveau 2</div>
+      <svg class="plan" viewBox="-5 -5 510 510">
+        <!-- les carrées principaux : étage 2 -->
+        <g class="guides">
+          <rect x="0" y="0" width="500" height="500"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+        </g>
+        <!-- les salless : étage 2 -->
+        <g class="rooms">
+          <g class="room" data-room-name="amphithéâtre Galois amphitheatre" data-room-floor="2">
+            <rect x="170" y="120" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="185">amphithéâtre<tspan x="285" dy="1em" class="main-name">Galois</tspan></text>
+            <use xlink:href="#door" transform="translate(170 240) rotate(-90)"></use>
+          </g>
+
+          <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre" data-room-floor="2">
+            <rect x="170" y="250" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Painlevé</tspan></text>
+            <use xlink:href="#door" transform="translate(170 260) rotate(-90) scale(-1 1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 206" data-room-floor="2">
+            <rect x="100" y="120" width="50" height="50"></rect>
+            <text class="room-name" x="125" y="145">salle<tspan x="125" dy="1em" class="main-name">206</tspan></text>
+            <use xlink:href="#door" transform="translate(150 140) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 204" data-room-floor="2">
+            <rect x="100" y="190" width="50" height="50"></rect>
+            <text class="room-name" x="125" y="215">salle<tspan x="125" dy="1em" class="main-name">204</tspan></text>
+            <use xlink:href="#door" transform="translate(150 200) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 202" data-room-floor="2">
+            <rect x="100" y="310" width="70" height="70"></rect>
+            <text class="room-name" x="135" y="345">salle<tspan x="135" dy="1em" class="main-name">202</tspan></text>
+            <use xlink:href="#door" transform="translate(165 310) scale(1 -1) rotate(180)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="2">
+            <rect x="320" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(335 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="2">
+            <rect x="360" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(375 410)"></use>
+          </g>
+        </g>
+        <!-- les partie non accessibless : étage 2 -->
+        <g class="useless">
+          <g class="room" data-room-name="">
+            <path d="M0 0 h500 v350 h-50 v-230 h-350 v260 h220 v120 h-320 z"></path>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="170" width="50" height="20"></rect>
+          </g>
+        </g>
+        <!-- les escaliers : étage 2 -->
+        <g class="stairs">
+          <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+          <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  1  =================== -->
+    <div ng-class="{hidden:search.maxFloor<1, insearch:seach.name, nothere:!search[1]}" class="floorcontainer">
+      <div class="floornumber"  ng-show="search.maxFloor==1">niveau 1</div>
+      <svg class="plan" viewBox="-5 -5 510 510">
+        <!-- les carrées principaux : étage 1 -->
+        <g class="guides">
+          <rect x="0" y="0" width="500" height="500"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+        </g>
+        <!-- les salless : étage 1 -->
+        <g class="rooms">
+          <g class="room" data-room-name="amphithéâtre Cauchy amphitheatre" data-room-floor="1">
+            <rect x="170" y="120" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="185">amphithéâtre<tspan x="285" dy="1em" class="main-name">Cauchy</tspan></text>
+            <use xlink:href="#door2" transform="translate(400 140) rotate(90)"></use>
+            <use xlink:href="#door2" transform="translate(400 200) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="amphithéâtre Chatelet amphitheatre" data-room-floor="1">
+            <rect x="170" y="250" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Chatelet</tspan></text>
+            <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
+            <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 104" data-room-floor="1">
+            <rect x="100" y="210" width="50" height="30"></rect>
+            <text class="room-name" x="125" y="225">salle<tspan x="125" dy="1em" class="main-name">104</tspan></text>
+            <use xlink:href="#door" transform="translate(150 220) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle 102" data-room-floor="1">
+            <rect x="100" y="310" width="70" height="70"></rect>
+            <text class="room-name" x="135" y="345">salle<tspan x="135" dy="1em" class="main-name">102</tspan></text>
+            <use xlink:href="#door" transform="translate(165 310) scale(1 -1) rotate(180)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="1">
+            <rect x="320" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(335 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="1">
+            <rect x="360" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(375 410)"></use>
+          </g>
+        </g>
+        <!-- les partie non accessibless : étage 1 -->
+        <g class="useless">
+          <g class="room" data-room-name="">
+            <rect x="100" y="120" width="50" height="30"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="150" width="50" height="60"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <path d="M0 0 h500 v350 h-50 v-230 h-350 v260 h220 v120 h-320 z"></path>
+          </g>
+        </g>
+        <!-- les escaliers : étage 1 -->
+        <g class="stairs">
+          <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+          <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  0  =================== -->
+    <div ng-class="{hidden:search.maxFloor<0, insearch:seach.name, nothere:!search[0]}" class="floorcontainer">
+      <div class="floornumber"  ng-show="search.maxFloor==0">niveau 0</div>
+      <svg class="plan" viewBox="-5 -5 510 510">
+        <!-- les carrées principaux : étage 0 -->
+        <g class="guides">
+          <rect x="0" y="0" width="500" height="500"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+        </g>
+        <!-- les salless : étage 0 -->
+        <g class="rooms">
+          <g class="room" data-room-name="amphithéâtre Cauchy" data-room-floor="0">
+            <rect x="170" y="120" width="160" height="130"></rect>
+            <text class="room-name" x="250" y="185">amphithéâtre<tspan x="250" dy="1em" class="main-name">Cauchy</tspan></text>
+            <use xlink:href="#door" transform="translate(170 245) rotate(-90)"></use>
+          </g>
+
+          <g class="room" data-room-name="amphithéâtre Chatelet" data-room-floor="0">
+            <rect x="170" y="250" width="160" height="130"></rect>
+            <text class="room-name" x="250" y="315">amphithéâtre<tspan x="250" dy="1em" class="main-name">Chatelet</tspan></text>
+            <use xlink:href="#door" transform="translate(170 255) rotate(-90) scale(-1 1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Salez" data-room-floor="0">
+            <rect x="330" y="120" width="70" height="130"></rect>
+            <text class="room-name" x="365" y="185">salle<tspan x="365" dy="1em" class="main-name">Salez</tspan></text>
+            <use xlink:href="#door" transform="translate(400 150) rotate(90)"></use>
+            <use xlink:href="#door" transform="translate(400 210) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="cafétéria cafeteria" data-room-floor="0">
+            <rect x="330" y="250" width="70" height="130"></rect>
+            <text class="room-name" x="365" y="315">cafétéria</text>
+            <use xlink:href="#door" transform="translate(400 290) rotate(90)"></use>
+            <use xlink:href="#door" transform="translate(400 350) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Borel" data-room-floor="0">
+            <rect x="0" y="0" width="50" height="130"></rect>
+            <text class="room-name" x="25" y="65">salle<tspan x="25" dy="1em" class="main-name">Borel</tspan></text>
+            <use xlink:href="#door" transform="translate(50 100) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="secrétariat IREM secretariat" data-room-floor="0">
+            <rect x="50" y="0" width="50" height="90"></rect>
+            <text class="room-name" x="75" y="45">secrétariat<tspan x="75" dy="1em" class="main-name">IREM</tspan></text>
+            <use xlink:href="#door" transform="translate(70 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="bibliothèque IREM bibliotheque" data-room-floor="0">
+            <rect x="100" y="0" width="50" height="90"></rect>
+            <text class="room-name" x="125" y="45">bibliothèque<tspan x="125" dy="1em" class="main-name">IREM</tspan></text>
+            <use xlink:href="#door" transform="translate(110 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="bibliothèque CAPES bibliotheque" data-room-floor="0">
+            <rect x="150" y="0" width="70" height="90"></rect>
+            <text class="room-name" x="185" y="45">bibliothèque<tspan x="185" dy="1em" class="main-name">CAPES</tspan></text>
+            <use xlink:href="#door" transform="translate(160 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="directeur IREM" data-room-floor="0">
+            <rect x="280" y="0" width="40" height="90"></rect>
+            <text class="room-name" x="300" y="45">directeur<tspan x="300" dy="1em" class="main-name">IREM</tspan></text>
+            <use xlink:href="#door" transform="translate(290 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Cartan" data-room-floor="0">
+            <rect x="320" y="0" width="80" height="90"></rect>
+            <text class="room-name" x="360" y="45">salle<tspan x="360" dy="1em" class="main-name">Cartan</tspan></text>
+            <use xlink:href="#door" transform="translate(330 90)  scale(1-1)"></use>
+            <use xlink:href="#door" transform="translate(370 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="0">
+            <rect x="0" y="130" width="70" height="30"></rect>
+            <text class="room-name" x="35" y="145">sanitaires</text>
+            <use xlink:href="#door" transform="translate(70 135) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="0">
+            <rect x="0" y="160" width="70" height="30"></rect>
+            <text class="room-name" x="35" y="175">sanitaires</text>
+            <use xlink:href="#door" transform="translate(70 165) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle des tuteurs" data-room-floor="0">
+            <rect x="0" y="190" width="70" height="30"></rect>
+            <text class="room-name" x="35" y="205">salle<tspan x="35" dy="1em" class="main-name">des tuteurs</tspan></text>
+            <use xlink:href="#door" transform="translate(70 215) rotate(90) scale(-1 1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Riesz" data-room-floor="0">
+            <rect x="0" y="220" width="70" height="60"></rect>
+            <text class="room-name" x="35" y="250">salle<tspan x="35" dy="1em" class="main-name">Riesz</tspan></text>
+            <use xlink:href="#door" transform="translate(70 225) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Gauss" data-room-floor="0">
+            <rect x="0" y="300" width="70" height="80"></rect>
+            <text class="room-name" x="35" y="340">salle<tspan x="35" dy="1em" class="main-name">Gauss</tspan></text>
+            <use xlink:href="#door" transform="translate(70 305) rotate(90)"></use>
+            <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Clarin" data-room-floor="0">
+            <rect x="0" y="380" width="70" height="120"></rect>
+            <text class="room-name" x="35" y="440">salle<tspan x="35" dy="1em" class="main-name">Clarin</tspan></text>
+            <use xlink:href="#door" transform="translate(70 385) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Levy" data-room-floor="0">
+            <rect x="70" y="410" width="90" height="90"></rect>
+            <text class="room-name" x="115" y="455">salle<tspan x="115" dy="1em" class="main-name">Levy</tspan></text>
+            <use xlink:href="#door" transform="translate(75 410)"></use>
+            <use xlink:href="#door" transform="translate(135 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="amphithéâtre Bernoulli amphitheatre" data-room-floor="0">
+            <rect x="160" y="410" width="160" height="90"></rect>
+            <text class="room-name" x="240" y="455">amphithéâtre<tspan x="240" dy="1em" class="main-name">Bernoulli</tspan></text>
+            <use xlink:href="#door" transform="translate(170 410)"></use>
+            <use xlink:href="#door" transform="translate(310 410) scale(-1 1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Dirichlet" data-room-floor="0">
+            <rect x="450" y="250" width="50" height="80"></rect>
+            <text class="room-name" x="475" y="290">salle<tspan x="475" dy="1em" class="main-name">Dirichlet</tspan></text>
+            <use xlink:href="#door" transform="translate(450 260) rotate(-90) scale(-1 1)"></use>
+            <use xlink:href="#door" transform="translate(450 320) rotate(-90)"></use>
+          </g>
+
+          <g class="room" data-room-name="apariteur" data-room-floor="0">
+            <path d="M500 380 v-50 h-50 v20 q 0 30 30 30 z"></path>
+            <text class="room-name" x="475" y="355">apariteur</text>
+            <use xlink:href="#door" transform="translate(495 380) scale(-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="0">
+            <rect x="320" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(335 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="0">
+            <rect x="360" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(375 410)"></use>
+          </g>
+          <!-- porte vers l'exterieur -->
+          <use xlink:href="#door2" transform="translate(235 0)"></use>
+          <use xlink:href="#door2" transform="translate(400 90)"></use>
+          <use xlink:href="#door2" transform="translate(430 90)"></use>
+          <use xlink:href="#door" transform="translate(0 285) "></use>
+          <use xlink:href="#door2" transform="translate(435 500) rotate(180)"></use>
+          <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
+          <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
+        </g>
+        <!-- les partie non accessibless : étage 0 -->
+        <g class="useless">
+          <g class="room" data-room-name="">
+            <rect x="100" y="120" width="50" height="50"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="170" width="50" height="50"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="310" width="70" height="70"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <path d="M470 120 v-30 h-10 h40 v160 h-50 v-100 z"></path>
+            <use xlink:href="#door" transform="translate(495 90) scale(-1 1)"></use>
+          </g>
+        </g>
+        <!-- les escaliers : étage 0 -->
+        <g class="stairs">
+          <use xlink:href="#stairs" transform="translate(220 40) scale(1.5 1.25)"></use>
+          <use xlink:href="#stairs3" transform="translate(400 0) scale(1.25 2)"></use>
+          <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+          <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  -1  =================== -->
+    <div ng-class="{hidden:search.maxFloor<-1, insearch:seach.name, nothere:!search[-1]}" class="floorcontainer">
+      <div class="floornumber"  ng-show="search.maxFloor==-1">niveau -1</div>
+      <svg class="plan" viewBox="-5 -5 510 510">
+        <!-- les ecarrées principaux: étage -1 -->
+        <g class="guides">
+          <rect x="0" y="0" width="500" height="500"></rect>
+          <rect x="100" y="120" width="300" height="260"></rect>
+        </g>
+        <!-- les salles : étage -1 -->
+        <g class="rooms">
+          <g class="room" data-room-name="amphithéâtre Archimède amphitheatre Archimede" data-room-floor="-1">
+            <rect x="170" y="250" width="230" height="130"></rect>
+            <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Archimède</tspan></text>
+            <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
+            <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Lebesgue" data-room-floor="-1">
+            <rect x="0" y="0" width="50" height="130"></rect>
+            <text class="room-name" x="25" y="65">salle<tspan x="25" dy="1em" class="main-name">Lebesgue</tspan></text>
+            <use xlink:href="#door" transform="translate(50 100) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Lie" data-room-floor="-1">
+            <rect x="50" y="0" width="60" height="90"></rect>
+            <text class="room-name" x="80" y="45">salle<tspan x="80" dy="1em" class="main-name">Lie</tspan></text>
+            <use xlink:href="#door" transform="translate(60 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Newton" data-room-floor="-1">
+            <rect x="110" y="0" width="110" height="90"></rect>
+            <text class="room-name" x="165" y="45">salle<tspan x="165" dy="1em" class="main-name">Newton</tspan></text>
+            <use xlink:href="#door" transform="translate(120 90)  scale(1-1)"></use>
+            <use xlink:href="#door" transform="translate(210 90)  scale(-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Riemann" data-room-floor="-1">
+            <rect x="280" y="0" width="60" height="90"></rect>
+            <text class="room-name" x="310" y="45">salle<tspan x="310" dy="1em" class="main-name">Riemann</tspan></text>
+            <use xlink:href="#door" transform="translate(290 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Weierstrass" data-room-floor="-1">
+            <rect x="340" y="0" width="60" height="90"></rect>
+            <text class="room-name" x="370" y="45">salle<tspan x="370" dy="1em" class="main-name">Weierstrass</tspan></text>
+            <use xlink:href="#door" transform="translate(350 90)  scale(1-1)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+            <rect x="0" y="130" width="70" height="30"></rect>
+            <text class="room-name" x="35" y="145">sanitaires</text>
+            <use xlink:href="#door" transform="translate(70 135) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+            <rect x="0" y="160" width="70" height="30"></rect>
+            <text class="room-name" x="35" y="175">sanitaires</text>
+            <use xlink:href="#door" transform="translate(70 165) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Hilbert" data-room-floor="-1">
+            <rect x="0" y="190" width="70" height="50"></rect>
+            <text class="room-name" x="35" y="215">salle<tspan x="35" dy="1em" class="main-name">Hilbert</tspan></text>
+            <use xlink:href="#door" transform="translate(70 210) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Euler" data-room-floor="-1">
+            <rect x="0" y="240" width="70" height="60"></rect>
+            <text class="room-name" x="35" y="270">salle<tspan x="35" dy="1em" class="main-name">Euler</tspan></text>
+            <use xlink:href="#door" transform="translate(70 245) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle de La Vallée Poussin Vallee dlvp" data-room-floor="-1">
+            <rect x="0" y="300" width="70" height="80"></rect>
+            <text class="room-name" x="35" y="330">salle<tspan x="35" dy="1em" class="main-name">de La Vallée</tspan>
+              <tspan x="35" dy="1em" class="main-name">Poussin</tspan></text>
+            <use xlink:href="#door" transform="translate(70 305) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Pascal" data-room-floor="-1">
+            <rect x="0" y="380" width="50" height="120"></rect>
+            <text class="room-name" x="25" y="440">salle<tspan x="25" dy="1em" class="main-name">Pascal</tspan></text>
+            <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
+            <use xlink:href="#door" transform="translate(50 385) rotate(90)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Fatou" data-room-floor="-1">
+            <rect x="50" y="410" width="60" height="90"></rect>
+            <text class="room-name" x="80" y="455">salle<tspan x="80" dy="1em" class="main-name">Fatou</tspan></text>
+            <use xlink:href="#door" transform="translate(75 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Hermite" data-room-floor="-1">
+            <rect x="110" y="410" width="70" height="90"></rect>
+            <text class="room-name" x="145" y="455">salle<tspan x="145" dy="1em" class="main-name">Hermite</tspan></text>
+            <use xlink:href="#door" transform="translate(120 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Hadamard" data-room-floor="-1">
+            <rect x="180" y="410" width="70" height="90"></rect>
+            <text class="room-name" x="215" y="455">salle<tspan x="215" dy="1em" class="main-name">Hadamard</tspan></text>
+            <use xlink:href="#door" transform="translate(190 410)"></use>
+            <use xlink:href="#door" transform="translate(230 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="salle Demartres" data-room-floor="-1">
+            <rect x="250" y="410" width="70" height="90"></rect>
+            <text class="room-name" x="285" y="455">salle<tspan x="285" dy="1em" class="main-name">Demartres</tspan></text>
+            <use xlink:href="#door" transform="translate(260 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+            <rect x="320" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(335 410)"></use>
+          </g>
+
+          <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+            <rect x="360" y="410" width="40" height="90"></rect>
+            <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+            <use xlink:href="#door" transform="translate(375 410)"></use>
+          </g>
+
+        <!-- porte vers l'exterieur -->
+        <use xlink:href="#door2" transform="translate(235 0)"></use>
+        <use xlink:href="#door2" transform="translate(435 500) rotate(180)"></use>
+        <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
+        <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
+      </g>
+      <!-- les partie non accessibles : étage -1 -->
+      <g class="useless">
+          <g class="room" data-room-name="">
+            <rect x="100" y="120" width="300" height="130"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <rect x="100" y="310" width="70" height="70"></rect>
+          </g>
+          <g class="room" data-room-name="">
+            <path d="M400 0 h100 v350 h-40 v-100 h-30 v-160 h-30 z"></path>
+          </g>
+        </g>
+        <!-- les escaliers : étage -1 -->
+        <g class="stairs">
+          <use xlink:href="#stairs" transform="translate(220 40) scale(1.5 1.25)"></use>
+          <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+          <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  M2  =================== -->
+    <div class="floorcontainer inout m2">
+      <svg class="plan" viewBox="-5 -505 510 1010">
+        <g class="building">
+          <path d="M225 -170 v50 h-20 l45 50 l45 -50 h-20 v-50 z"></path>
+          <text class="building-name" x="250" y="-175">M2</text>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  A3  =================== -->
+    <div class="floorcontainer inout a3">
+      <svg class="plan" viewBox="-5 -505 510 1010">
+        <g class="building">
+          <path d="M425 14 v50 h-20 l45 50 l45 -50 h-20 v-50 z"></path>
+          <text class="building-name" x="450" y="171">A3</text>
+        </g>
+      </svg>
+    </div>
+    <!-- ===================  Controles  =================== -->
+    <div class="controls">
+      <input type="text" placeholder="Chercher" ng-model="search.name" autofocus></input>
+      <ul class="menu">
+        <li ng-class="{selected:search.maxFloor==3, insearch:seach.name, nothere:!search[3]}" ng-click="search.maxFloor=3">niveau 3</li>
+        <li ng-class="{selected:search.maxFloor==2, insearch:seach.name, nothere:!search[2]}" ng-click="search.maxFloor=2">niveau 2</li>
+        <li ng-class="{selected:search.maxFloor==1, insearch:seach.name, nothere:!search[1]}" ng-click="search.maxFloor=1">niveau 1</li>
+        <li ng-class="{selected:search.maxFloor==0, insearch:seach.name, nothere:!search[0]}" ng-click="search.maxFloor=0">niveau 0</li>
+        <li ng-class="{selected:search.maxFloor==-1, insearch:seach.name, nothere:!search[-1]}" ng-click="search.maxFloor=-1">niveau -1</li>
+      </ul>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,91 @@
+svg {
+  stroke-width: 2;
+  stroke: black;
+}
+
+/* ------- les carrées principaux -------*/
+.guides {
+  fill: none;
+  stroke: gray;
+}
+.insearch .guides {
+  fill: none;
+}
+
+/* ------- les salles -------*/
+.room {
+  fill:#BFB;
+  opacity:1;
+}
+.room.isnotok{
+  fill:#BFB;
+  opacity:.1;
+}
+.room.isok {
+  fill:#FBB;
+  opacity:1;
+}
+
+/* ------- les partie inaccessibles -------*/
+.useless .room{
+  fill: #EEE;
+}
+.useless .room.isnotok{
+  opacity:.1;
+}
+
+/* ------- les portes -------*/
+.door {
+  stroke: darkGray;
+}
+.door .arc {
+  fill: white;
+  stroke-width: 1;
+}
+.door .front {
+  stroke-width: 3;
+}
+
+/* ------- les escaliers -------*/
+.stairs {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+.stairs rect, .stairs path {
+  vector-effect:non-scaling-stroke;
+}
+.stairs rect {
+  stroke: gray;
+}
+.stairs .updown {
+  stroke: darkGray;
+}
+
+/* ------- noms des pièces -------*/
+.room-name {
+  fill:#444;
+  stroke:none;
+  font-size: 10px;
+  text-anchor: middle;
+}
+.room-name .main-name {
+  fill:black;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+/* ------- M2 -------*/
+.building path {
+  fill: lightgoldenrodyellow;
+  stroke: lightGray;
+  stroke-width:3px;
+}
+.building-name {
+  font-size: 4em;
+  font-family: Impact, Charcoal, sans-serif;
+  fill: lightGray;
+  stroke: none;
+  text-anchor: middle;
+}
+

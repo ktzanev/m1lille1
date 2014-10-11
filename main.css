@@ -1,0 +1,147 @@
+/* --- les définition des portes et des escaliers --- */
+.svgdefs {
+  display: none;
+}
+
+/* --- les svg avec les plans des étages --- */
+.plan {
+  position:absolute;
+  width:70vw;
+  height:70vh;
+  margin: -35vh -35vw;
+  top:50%;
+  left:50%;
+  opacity: 1;
+}
+
+/* --- les div contenant les plans des étages --- */
+.floorcontainer {
+  width: 100vw;
+  height: 100vh;
+  margin: -50vh -50vw;
+  text-align: center;
+  position:fixed;
+
+  top:50vh;
+  left:50vw;
+  transform: rotate(-45deg);
+  opacity:1;
+
+  /* animation */
+  -webkit-transition:all ease-in-out .5s;
+  -moz-transition:all ease-in-out .5s;
+  -o-transition:all ease-in-out .5s;
+  transition:all ease-in-out .5s;
+}
+.floorcontainer.hidden {
+  left:-50vw;
+  transform: rotate(0deg);
+  opacity:0;
+
+  /* animation */
+  -webkit-transition:all ease-in-out .5s;
+  -moz-transition:all ease-in-out .5s;
+  -o-transition:all ease-in-out .5s;
+  transition:all ease-in-out .5s;
+}
+/* offsets */
+.floorcontainer:nth-of-type(1) {
+  top:48vh;
+  z-index: -1;
+}
+.floorcontainer:nth-of-type(2) {
+  top:49vh;
+  z-index: -2;
+}
+.floorcontainer:nth-of-type(3) {
+  top:50vh;
+  z-index: -3;
+}
+.floorcontainer:nth-of-type(4) {
+  top:51vh;
+  z-index: -4;
+}
+.floorcontainer:nth-of-type(5) {
+  top:52vh;
+  z-index: -5;
+}
+
+/* --- le numéro de niveau --- */
+.floorcontainer .floornumber {
+  font-size: 3em;
+  color:lightGray;
+  font-family: Impact, Charcoal, sans-serif;
+  position : absolute;
+  width : 14em;
+  height: 1em;
+  margin: -1em -7em 0em -7em;
+  top: 14vh;
+  left:50%;
+}
+
+/* --- m2 + a3 --- */
+.floorcontainer.m2,
+.floorcontainer.a3 {
+  top:52vh;
+  z-index: -7;
+}
+.floorcontainer.m2 .plan,
+.floorcontainer.a3 .plan {
+  height: 140vh;
+}
+.floorcontainer.m2 .plan {
+  margin-top: -105vh;
+}
+
+/* --- menu --- */
+.controls {
+  position: fixed;
+  top: 0px;
+  right: 1em;
+  width: 7em;
+  text-align: center;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.controls input {
+  display: inline-block;
+  width: 7em;
+  text-align: center;
+  padding: 4px;
+  margin: 4px;
+  font-family: Tahoma, Geneva, sans-serif;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+.controls input:focus {
+  outline: none;
+  border-color: #FBB;
+  box-shadow: 0 0 7px #FBB;
+}
+
+.controls ul.menu {
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+  margin: 4px;
+}
+.controls .menu li {
+  border: 1px solid gray;
+  width: 5em;
+  text-align: center;
+  padding: 4px;
+  margin-top: -1px;
+  cursor: pointer;
+}
+.controls .menu li:first-child {
+  border-radius: 7px 7px 0px 0px ;
+}
+.controls .menu li:last-child {
+  border-radius: 0px 0px 7px 7px;
+}
+.controls .menu li.nothere {
+  background-color: lightGray;
+  color: gray;
+}
+.controls .menu li.selected {
+  background-color: #FBB;
+}
