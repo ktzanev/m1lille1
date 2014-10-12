@@ -3,7 +3,21 @@ svg {
   stroke: black;
 }
 
-/* ------- les carrées principaux -------*/
+/* ------- m2 -------*/
+.m2 {
+  fill: #EEE;
+  stroke: gray;
+}
+.m2.n-1 rect{
+  fill: none;
+  stroke: gray;
+}
+.m2 text {
+  font-size:4em;
+  fill:gray;
+}
+
+/* ------- les carrés principaux -------*/
 .guides {
   fill: none;
   stroke: gray;
@@ -26,7 +40,7 @@ svg {
   opacity:1;
 }
 
-/* ------- les partie inaccessibles -------*/
+/* ------- les partie non accessibles -------*/
 .useless .room{
   fill: #EEE;
 }

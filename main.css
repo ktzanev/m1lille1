@@ -5,128 +5,174 @@
 
 /* --- les svg avec les plans des étages --- */
 .plan {
-  position:absolute;
-  width:70vw;
-  height:70vh;
-  margin: -35vh -35vw;
-  top:50%;
-  left:50%;
+  position: absolute;
+  width: 70vmin;
+  height: 70vmin;
+  margin: -35vmin;
+  top: 50vh;
+  left: 50vw;
   opacity: 1;
 }
+.plan.n0,
+.plan.n-1 {
+  height: 112vmin;
+  margin-top: -77vmin
+ }
 
 /* --- les div contenant les plans des étages --- */
 .floorcontainer {
   width: 100vw;
   height: 100vh;
   margin: -50vh -50vw;
-  text-align: center;
-  position:fixed;
 
-  top:50vh;
-  left:50vw;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+
   transform: rotate(-45deg);
-  opacity:1;
+  opacity: 1;
 
   /* animation */
-  -webkit-transition:all ease-in-out .5s;
-  -moz-transition:all ease-in-out .5s;
-  -o-transition:all ease-in-out .5s;
-  transition:all ease-in-out .5s;
+  -webkit-transition: all ease-in-out .5s;
+  -moz-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
 }
-.floorcontainer.hidden {
-  left:-50vw;
+.floorcontainer.nonorth {
   transform: rotate(0deg);
-  opacity:0;
-
-  /* animation */
-  -webkit-transition:all ease-in-out .5s;
-  -moz-transition:all ease-in-out .5s;
-  -o-transition:all ease-in-out .5s;
-  transition:all ease-in-out .5s;
 }
 /* offsets */
 .floorcontainer:nth-of-type(1) {
-  top:48vh;
+  top: 48vh;
   z-index: -1;
 }
 .floorcontainer:nth-of-type(2) {
-  top:49vh;
+  top: 49vh;
   z-index: -2;
 }
 .floorcontainer:nth-of-type(3) {
-  top:50vh;
+  top: 50vh;
   z-index: -3;
 }
 .floorcontainer:nth-of-type(4) {
-  top:51vh;
+  top: 51vh;
   z-index: -4;
 }
 .floorcontainer:nth-of-type(5) {
-  top:52vh;
+  top: 52vh;
   z-index: -5;
+}
+.floorcontainer.nonorth:nth-of-type(1) {
+  left: 51vw;
+  z-index: -1;
+}
+.floorcontainer.nonorth:nth-of-type(2) {
+  left: 50.5vw;
+  z-index: -2;
+}
+.floorcontainer.nonorth:nth-of-type(3) {
+  left: 50vw;
+  z-index: -3;
+}
+.floorcontainer.nonorth:nth-of-type(4) {
+  left: 49.5vw;
+  z-index: -4;
+}
+.floorcontainer.nonorth:nth-of-type(5) {
+  left: 49vw;
+  z-index: -5;
+}
+/* hide */
+.floorcontainer.hidden {
+  left: -50vw;
+  transform: rotate(0deg);
+  opacity: 0;
+
+  /* animation */
+  -webkit-transition: all ease-in-out .5s;
+  -moz-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+.floorcontainer.hidden.nonorth {
+  left: -50vw;
+  transform: rotate(45deg);
+  opacity: 0;
 }
 
 /* --- le numéro de niveau --- */
 .floorcontainer .floornumber {
-  font-size: 3em;
-  color:lightGray;
+  font-size: 7vmin;
   font-family: Impact, Charcoal, sans-serif;
-  position : absolute;
-  width : 14em;
-  height: 1em;
-  margin: -1em -7em 0em -7em;
-  top: 14vh;
-  left:50%;
-}
+  color: lightGray;
+  text-align: center;
 
-/* --- m2 + a3 --- */
-.floorcontainer.m2,
-.floorcontainer.a3 {
-  top:52vh;
-  z-index: -7;
-}
-.floorcontainer.m2 .plan,
-.floorcontainer.a3 .plan {
-  height: 140vh;
-}
-.floorcontainer.m2 .plan {
-  margin-top: -105vh;
+  position: absolute;
+  width: 35vmin;
+  height: 7vmin;
+  margin-top: -45vmin;
+  margin-left: -41vmin;
+  top: 50vh;
+  left: 50vw;
 }
 
 /* --- menu --- */
 .controls {
   position: fixed;
   top: 0px;
-  right: 1em;
-  width: 7em;
-  text-align: center;
+  right: 0px;
+  width: 42vmin;
+
   font-family: Tahoma, Geneva, sans-serif;
+  font-size:5vmin;
+  text-align: center;
 }
 .controls input {
   display: inline-block;
-  width: 7em;
-  text-align: center;
-  padding: 4px;
-  margin: 4px;
+  width: 35vmin;
+  padding: 1vmin;
+  margin: 1vmin;
+
   font-family: Tahoma, Geneva, sans-serif;
+  font-size:5vmin;
+  text-align: center;
+
   border: 1px solid gray;
-  border-radius: 7px;
+  border-radius: 7vmin;
 }
 .controls input:focus {
   outline: none;
   border-color: #FBB;
-  box-shadow: 0 0 7px #FBB;
+  box-shadow: 0 0 1vmin #FBB;
 }
-
+.clear {
+  position: absolute;
+  top: 2.5vmin;
+  right: 5vmin;
+  border-radius: 2.5vmin;
+  border: 1px solid lightGray;
+  width: 5vmin;
+  height: 5vmin;
+  cursor: pointer;
+}
+.clear .cross {
+  position: relative;
+  top: -.70vmin;
+  display: inline-block;
+  width: 4vmin;
+  height: 4vmin;
+  color: lightGray;
+}
 .controls ul.menu {
   display: inline-block;
   list-style: none;
   padding: 0px;
   margin: 4px;
+  background: rgba(255,255,255,.7);
 }
 .controls .menu li {
   border: 1px solid gray;
-  width: 5em;
+  width: 25vmin;
   text-align: center;
   padding: 4px;
   margin-top: -1px;
@@ -144,4 +190,36 @@
 }
 .controls .menu li.selected {
   background-color: #FBB;
+}
+
+/* --- boussole --- */
+.compass {
+  position: fixed;
+  bottom: 2vmin;
+  left: 2vmin;
+  width: 6vmin;
+  height: 14vmin;
+  cursor: pointer;
+}
+.compass.nonorth {
+  transform: rotate(45deg);
+}
+.compass svg {
+  width: 100%;
+  height: 100%;
+  fill: black;
+  fill-opacity:1;
+  stroke-width: 1px;
+}
+.compass svg .nw {
+  fill-opacity:.7;
+}
+.compass svg .se {
+  fill-opacity:.3;
+}
+.compass svg .sw {
+  fill-opacity:0;
+}
+.compass svg .north {
+  text-anchor: middle;
 }

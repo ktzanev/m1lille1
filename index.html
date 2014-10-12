@@ -50,7 +50,7 @@
       </def>
     </svg>
     <!-- ===================  3  =================== -->
-    <div ng-class="{hidden:search.maxFloor<3, insearch:seach.name, nothere:!search[3]}" class="floorcontainer">
+    <div ng-class="{hidden:search.maxFloor<3, insearch:seach.name, nothere:!search[3], nonorth:!north}" class="floorcontainer">
       <div class="floornumber"  ng-show="search.maxFloor==3">niveau 3</div>
       <svg class="plan" viewBox="-5 -5 510 510">
         <!-- les carrés principaux: étage 3 -->
@@ -115,7 +115,7 @@
       </svg>
     </div>
     <!-- ===================  2  =================== -->
-    <div ng-class="{hidden:search.maxFloor<2, insearch:seach.name, nothere:!search[2]}" class="floorcontainer">
+    <div ng-class="{hidden:search.maxFloor<2, insearch:seach.name, nothere:!search[2], nonorth:!north}" class="floorcontainer">
       <div class="floornumber"  ng-show="search.maxFloor==2">niveau 2</div>
       <svg class="plan" viewBox="-5 -5 510 510">
         <!-- les carrés principaux: étage 2 -->
@@ -185,7 +185,7 @@
       </svg>
     </div>
     <!-- ===================  1  =================== -->
-    <div ng-class="{hidden:search.maxFloor<1, insearch:seach.name, nothere:!search[1]}" class="floorcontainer">
+    <div ng-class="{hidden:search.maxFloor<1, insearch:seach.name, nothere:!search[1], nonorth:!north}" class="floorcontainer">
       <div class="floornumber"  ng-show="search.maxFloor==1">niveau 1</div>
       <svg class="plan" viewBox="-5 -5 510 510">
         <!-- les carrés principaux: étage 1 -->
@@ -253,9 +253,15 @@
       </svg>
     </div>
     <!-- ===================  0  =================== -->
-    <div ng-class="{hidden:search.maxFloor<0, insearch:seach.name, nothere:!search[0]}" class="floorcontainer">
+    <div ng-class="{hidden:search.maxFloor<0, insearch:seach.name, nothere:!search[0], nonorth:!north}" class="floorcontainer">
       <div class="floornumber"  ng-show="search.maxFloor==0">niveau 0</div>
-      <svg class="plan" viewBox="-5 -5 510 510">
+      <svg class="plan n0" viewBox="-5 -305 510 810">
+        <!-- le bâtiment M2 -->
+        <g class="m2 n0">
+          <path d="M-50 -300 v160 h330 v70 h50 v-70 h10 v-60 h-10 v-100"></path>
+          <rect x="220" y="-140" width="60" height="140"></rect>
+          <text class="room-name" x="250" y="-170">M2</text>
+        </g>
         <!-- les carrés principaux: étage 0 -->
         <g class="guides">
           <rect x="0" y="0" width="500" height="500"></rect>
@@ -436,9 +442,15 @@
       </svg>
     </div>
     <!-- ===================  -1  =================== -->
-    <div ng-class="{hidden:search.maxFloor<-1, insearch:seach.name, nothere:!search[-1]}" class="floorcontainer">
+    <div ng-class="{hidden:search.maxFloor<-1, insearch:seach.name, nothere:!search[-1], nonorth:!north}" class="floorcontainer">
       <div class="floornumber"  ng-show="search.maxFloor==-1">niveau -1</div>
-      <svg class="plan" viewBox="-5 -5 510 510">
+      <svg class="plan n-1" viewBox="-5 -305 510 810">
+        <!-- le bâtiment M2 -->
+        <g class="m2 n-1">
+          <path d="M-50 -300 v160 h330 v70 h50 v-70 h10 v-60 h-10 v-100"></path>
+          <rect x="220" y="-140" width="60" height="140"></rect>
+          <text class="room-name" x="250" y="-170">M2</text>
+        </g>
         <!-- les carrés principaux: étage -1 -->
         <g class="guides">
           <rect x="0" y="0" width="500" height="500"></rect>
@@ -585,27 +597,10 @@
         </g>
       </svg>
     </div>
-    <!-- ===================  M2  =================== -->
-    <div class="floorcontainer inout m2">
-      <svg class="plan" viewBox="-5 -505 510 1010">
-        <g class="building">
-          <path d="M225 -170 v50 h-20 l45 50 l45 -50 h-20 v-50 z"></path>
-          <text class="building-name" x="250" y="-175">M2</text>
-        </g>
-      </svg>
-    </div>
-    <!-- ===================  A3  =================== -->
-    <div class="floorcontainer inout a3">
-      <svg class="plan" viewBox="-5 -505 510 1010">
-        <g class="building">
-          <path d="M425 14 v50 h-20 l45 50 l45 -50 h-20 v-50 z"></path>
-          <text class="building-name" x="450" y="171">A3</text>
-        </g>
-      </svg>
-    </div>
     <!-- ===================  Contrôles  =================== -->
     <div class="controls">
       <input type="text" placeholder="Chercher" ng-model="search.name" autofocus></input>
+      <span class="clear" ng-show="search.name" ng-click="search.name=''"><span class="cross">X</span></span>
       <ul class="menu">
         <li ng-class="{selected:search.maxFloor==3, insearch:seach.name, nothere:!search[3]}" ng-click="search.maxFloor=3">niveau 3</li>
         <li ng-class="{selected:search.maxFloor==2, insearch:seach.name, nothere:!search[2]}" ng-click="search.maxFloor=2">niveau 2</li>
@@ -614,6 +609,17 @@
         <li ng-class="{selected:search.maxFloor==-1, insearch:seach.name, nothere:!search[-1]}" ng-click="search.maxFloor=-1">niveau -1</li>
       </ul>
     </div>
+    <!-- ===================  Contrôles  =================== -->
+    <div class="compass" ng-class="{nonorth:!north}" ng-click="north = !north" ng-init="north=true">
+      <svg viewbox="-15 -35 30 70">
+        <path d="m0 0 h-10 l10 20 z" class="sw"></path>
+        <path d="m0 0 h10 l-10 20 z" class="se"></path>
+        <path d="m0 0 h10 l-10 -20 z" class="ne"></path>
+        <path d="m0 0 h-10 l10 -20 z" class="nw"></path>
+        <text x="0" y="-21" class="north">N</text>
+      </svg>
+    </div>
+
   </body>
 
 </html>
