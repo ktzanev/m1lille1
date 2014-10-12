@@ -17,7 +17,7 @@ svg {
   fill:gray;
 }
 
-/* ------- les carrées principaux -------*/
+/* ------- les carrés principaux -------*/
 .guides {
   fill: none;
   stroke: gray;
@@ -40,7 +40,7 @@ svg {
   opacity:1;
 }
 
-/* ------- les partie inaccessibles -------*/
+/* ------- les partie non accessibles -------*/
 .useless .room{
   fill: #EEE;
 }

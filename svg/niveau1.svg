@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="svg.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="plan" viewBox="-5 -305 510 810" width="510" height="810">
-  <!-- les definitions -->
+  <!-- les définitions -->
   <def>
     <!-- porte simple -->
     <g id="door" class="door">
@@ -36,12 +36,12 @@
       <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
     </g>
   </def>
-  <!-- les carrées principaux : étage 1 -->
+  <!-- les carrés principaux: étage 1 -->
   <g class="guides">
     <rect x="0" y="0" width="500" height="500"></rect>
     <rect x="100" y="120" width="300" height="260"></rect>
   </g>
-  <!-- les salless : étage 1 -->
+  <!-- les salles: étage 1 -->
   <g class="rooms">
     <g class="room" data-room-name="amphithéâtre Cauchy amphitheatre" data-room-floor="1">
       <rect x="170" y="120" width="230" height="130"></rect>
@@ -81,7 +81,7 @@
       <use xlink:href="#door" transform="translate(375 410)"></use>
     </g>
   </g>
-  <!-- les partie non accessibless : étage 1 -->
+  <!-- les partie non accessibles: étage 1 -->
   <g class="useless">
     <g class="room" data-room-name="">
       <rect x="100" y="120" width="50" height="30"></rect>
@@ -93,7 +93,7 @@
       <path d="M0 0 h500 v350 h-50 v-230 h-350 v260 h220 v120 h-320 z"></path>
     </g>
   </g>
-  <!-- les escaliers : étage 1 -->
+  <!-- les escaliers: étage 1 -->
   <g class="stairs">
     <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
     <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>

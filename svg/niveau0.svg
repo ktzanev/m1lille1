@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="svg.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="plan" viewBox="-5 -305 510 810" width="510" height="810">
-  <!-- les definitions -->
+  <!-- les définitions -->
   <def>
     <!-- porte simple -->
     <g id="door" class="door">
@@ -42,12 +42,12 @@
     <rect x="220" y="-140" width="60" height="140"></rect>
     <text class="room-name" x="250" y="-170">M2</text>
   </g>
-  <!-- les carrées principaux : étage 0 -->
+  <!-- les carrés principaux: étage 0 -->
   <g class="guides">
     <rect x="0" y="0" width="500" height="500"></rect>
     <rect x="100" y="120" width="300" height="260"></rect>
   </g>
-  <!-- les salless : étage 0 -->
+  <!-- les salles: étage 0 -->
   <g class="rooms">
     <g class="room" data-room-name="amphithéâtre Cauchy" data-room-floor="0">
       <rect x="170" y="120" width="160" height="130"></rect>
@@ -172,7 +172,7 @@
 
     <g class="room" data-room-name="apariteur" data-room-floor="0">
       <path d="M500 380 v-50 h-50 v20 q 0 30 30 30 z"></path>
-      <text class="room-name" x="475" y="355">apariteur</text>
+      <text class="room-name" x="475" y="355">appariteur</text>
       <use xlink:href="#door" transform="translate(495 380) scale(-1)"></use>
     </g>
 
@@ -187,7 +187,7 @@
       <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
       <use xlink:href="#door" transform="translate(375 410)"></use>
     </g>
-    <!-- porte vers l'exterieur -->
+    <!-- portes vers l'extérieur -->
     <use xlink:href="#door2" transform="translate(235 0)"></use>
     <use xlink:href="#door2" transform="translate(400 90)"></use>
     <use xlink:href="#door2" transform="translate(430 90)"></use>
@@ -196,7 +196,7 @@
     <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
     <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
   </g>
-  <!-- les partie non accessibless : étage 0 -->
+  <!-- les partie non accessibles: étage 0 -->
   <g class="useless">
     <g class="room" data-room-name="">
       <rect x="100" y="120" width="50" height="50"></rect>
@@ -212,7 +212,7 @@
       <use xlink:href="#door" transform="translate(495 90) scale(-1 1)"></use>
     </g>
   </g>
-  <!-- les escaliers : étage 0 -->
+  <!-- les escaliers: étage 0 -->
   <g class="stairs">
     <use xlink:href="#stairs" transform="translate(220 40) scale(1.5 1.25)"></use>
     <use xlink:href="#stairs3" transform="translate(400 0) scale(1.25 2)"></use>
