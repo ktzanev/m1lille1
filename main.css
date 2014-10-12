@@ -200,9 +200,10 @@
   width: 6vmin;
   height: 14vmin;
   cursor: pointer;
+  transform: rotate(25deg);
 }
 .compass.nonorth {
-  transform: rotate(45deg);
+  transform: rotate(70deg);
 }
 .compass svg {
   width: 100%;
