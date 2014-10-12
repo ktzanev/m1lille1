@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="svg.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="plan" viewBox="-5 -305 510 810" width="510" height="810">
+  <!-- les definitions -->
+  <def>
+    <!-- porte simple -->
+    <g id="door" class="door">
+      <path d="M0 0 h 10" class="front"></path>
+      <path d="M0 0 l 0 10 q 10 0 10 -10" class="arc"></path>
+    </g>
+    <!-- porte double -->
+    <g id="door2" class="door">
+      <path d="M0 0 h 30" class="front"></path>
+      <path d="M15 0 l 2 15 q14 0 13 -15" class="arc"></path>
+      <path d="M15 0 l -2 15 q-14 0 -13 -15" class="arc"></path>
+    </g>
+    <!-- escalier simple -->
+    <g id="stairs" class="stairs" vector-effect="non-scaling-stroke">
+      <rect x="0" y="0" width="40" height="40"></rect>
+      <rect x="19" y="0" width="2" height="30" class="midline"></rect>
+      <path d="M2 30 l8 -30 l8 30 m4 -30 l8 30 l8 -30" class="updown"></path>
+      <path d="M0 10 h40 M0 20 h40 M0 30 h40"></path>
+    </g>
+    <!-- escalier double -->
+    <g id="stairs2" class="stairs" vector-effect="non-scaling-stroke">
+      <rect x="0" y="0" width="80" height="30"></rect>
+      <rect x="19" y="0" width="2" height="30" class="midline"></rect>
+      <rect x="59" y="0" width="2" height="30" class="midline"></rect>
+      <path d="M2 30 l8 -30 l8 30 m4-30 l18 30 l18 -30 m4 30 l8 -30 l8 30" class="updown"></path>
+      <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
+    </g>
+    <!-- escalier double montant -->
+    <g id="stairs3" class="stairs" vector-effect="non-scaling-stroke">
+      <rect x="0" y="0" width="80" height="40"></rect>
+      <path d="M2 30 l39 -30 l39 30" class="updown"></path>
+      <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
+    </g>
+  </def>
+  <!-- le bâtiment M2 -->
+  <g class="m2 n-1">
+    <path d="M-50 -300 v160 h330 v70 h50 v-70 h10 v-60 h-10 v-100"></path>
+    <rect x="220" y="-140" width="60" height="140"></rect>
+    <text class="room-name" x="250" y="-170">M2</text>
+  </g>
+  <!-- les ecarrées principaux: étage -1 -->
+  <g class="guides">
+    <rect x="0" y="0" width="500" height="500"></rect>
+    <rect x="100" y="120" width="300" height="260"></rect>
+  </g>
+  <!-- les salles : étage -1 -->
+  <g class="rooms">
+    <g class="room" data-room-name="amphithéâtre Archimède amphitheatre Archimede" data-room-floor="-1">
+      <rect x="170" y="250" width="230" height="130"></rect>
+      <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Archimède</tspan></text>
+      <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
+      <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Lebesgue" data-room-floor="-1">
+      <rect x="0" y="0" width="50" height="130"></rect>
+      <text class="room-name" x="25" y="65">salle<tspan x="25" dy="1em" class="main-name">Lebesgue</tspan></text>
+      <use xlink:href="#door" transform="translate(50 100) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Lie" data-room-floor="-1">
+      <rect x="50" y="0" width="60" height="90"></rect>
+      <text class="room-name" x="80" y="45">salle<tspan x="80" dy="1em" class="main-name">Lie</tspan></text>
+      <use xlink:href="#door" transform="translate(60 90)  scale(1-1)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Newton" data-room-floor="-1">
+      <rect x="110" y="0" width="110" height="90"></rect>
+      <text class="room-name" x="165" y="45">salle<tspan x="165" dy="1em" class="main-name">Newton</tspan></text>
+      <use xlink:href="#door" transform="translate(120 90)  scale(1-1)"></use>
+      <use xlink:href="#door" transform="translate(210 90)  scale(-1)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Riemann" data-room-floor="-1">
+      <rect x="280" y="0" width="60" height="90"></rect>
+      <text class="room-name" x="310" y="45">salle<tspan x="310" dy="1em" class="main-name">Riemann</tspan></text>
+      <use xlink:href="#door" transform="translate(290 90)  scale(1-1)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Weierstrass" data-room-floor="-1">
+      <rect x="340" y="0" width="60" height="90"></rect>
+      <text class="room-name" x="370" y="45">salle<tspan x="370" dy="1em" class="main-name">Weierstrass</tspan></text>
+      <use xlink:href="#door" transform="translate(350 90)  scale(1-1)"></use>
+    </g>
+
+    <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+      <rect x="0" y="130" width="70" height="30"></rect>
+      <text class="room-name" x="35" y="145">sanitaires</text>
+      <use xlink:href="#door" transform="translate(70 135) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+      <rect x="0" y="160" width="70" height="30"></rect>
+      <text class="room-name" x="35" y="175">sanitaires</text>
+      <use xlink:href="#door" transform="translate(70 165) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Hilbert" data-room-floor="-1">
+      <rect x="0" y="190" width="70" height="50"></rect>
+      <text class="room-name" x="35" y="215">salle<tspan x="35" dy="1em" class="main-name">Hilbert</tspan></text>
+      <use xlink:href="#door" transform="translate(70 210) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Euler" data-room-floor="-1">
+      <rect x="0" y="240" width="70" height="60"></rect>
+      <text class="room-name" x="35" y="270">salle<tspan x="35" dy="1em" class="main-name">Euler</tspan></text>
+      <use xlink:href="#door" transform="translate(70 245) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle de La Vallée Poussin Vallee dlvp" data-room-floor="-1">
+      <rect x="0" y="300" width="70" height="80"></rect>
+      <text class="room-name" x="35" y="330">salle<tspan x="35" dy="1em" class="main-name">de La Vallée</tspan>
+        <tspan x="35" dy="1em" class="main-name">Poussin</tspan></text>
+      <use xlink:href="#door" transform="translate(70 305) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Pascal" data-room-floor="-1">
+      <rect x="0" y="380" width="50" height="120"></rect>
+      <text class="room-name" x="25" y="440">salle<tspan x="25" dy="1em" class="main-name">Pascal</tspan></text>
+      <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
+      <use xlink:href="#door" transform="translate(50 385) rotate(90)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Fatou" data-room-floor="-1">
+      <rect x="50" y="410" width="60" height="90"></rect>
+      <text class="room-name" x="80" y="455">salle<tspan x="80" dy="1em" class="main-name">Fatou</tspan></text>
+      <use xlink:href="#door" transform="translate(75 410)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Hermite" data-room-floor="-1">
+      <rect x="110" y="410" width="70" height="90"></rect>
+      <text class="room-name" x="145" y="455">salle<tspan x="145" dy="1em" class="main-name">Hermite</tspan></text>
+      <use xlink:href="#door" transform="translate(120 410)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Hadamard" data-room-floor="-1">
+      <rect x="180" y="410" width="70" height="90"></rect>
+      <text class="room-name" x="215" y="455">salle<tspan x="215" dy="1em" class="main-name">Hadamard</tspan></text>
+      <use xlink:href="#door" transform="translate(190 410)"></use>
+      <use xlink:href="#door" transform="translate(230 410)"></use>
+    </g>
+
+    <g class="room" data-room-name="salle Demartres" data-room-floor="-1">
+      <rect x="250" y="410" width="70" height="90"></rect>
+      <text class="room-name" x="285" y="455">salle<tspan x="285" dy="1em" class="main-name">Demartres</tspan></text>
+      <use xlink:href="#door" transform="translate(260 410)"></use>
+    </g>
+
+    <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+      <rect x="320" y="410" width="40" height="90"></rect>
+      <text class="room-name" x="340" y="455" transform="rotate(-90 340 455)">sanitaires</text>
+      <use xlink:href="#door" transform="translate(335 410)"></use>
+    </g>
+
+    <g class="room" data-room-name="sanitaires toilettes wc" data-room-floor="-1">
+      <rect x="360" y="410" width="40" height="90"></rect>
+      <text class="room-name" x="380" y="455" transform="rotate(-90 380 455)">sanitaires</text>
+      <use xlink:href="#door" transform="translate(375 410)"></use>
+    </g>
+
+  <!-- porte vers l'exterieur -->
+  <use xlink:href="#door2" transform="translate(235 0)"></use>
+  <use xlink:href="#door2" transform="translate(435 500) rotate(180)"></use>
+  <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
+  <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
+</g>
+<!-- les partie non accessibles : étage -1 -->
+<g class="useless">
+    <g class="room" data-room-name="">
+      <rect x="100" y="120" width="300" height="130"></rect>
+    </g>
+    <g class="room" data-room-name="">
+      <rect x="100" y="310" width="70" height="70"></rect>
+    </g>
+    <g class="room" data-room-name="">
+      <path d="M400 0 h100 v350 h-40 v-100 h-30 v-160 h-30 z"></path>
+    </g>
+  </g>
+  <!-- les escaliers : étage -1 -->
+  <g class="stairs">
+    <use xlink:href="#stairs" transform="translate(220 40) scale(1.5 1.25)"></use>
+    <use xlink:href="#stairs" transform="translate(100 260) scale(1.25 1.25)"></use>
+    <use xlink:href="#stairs2" transform="translate(400 410) scale(1.25 1.75)"></use>
+  </g>
+</svg>
