@@ -224,3 +224,24 @@
 .compass svg .north {
   text-anchor: middle;
 }
+/* --- liens --- */
+.octocat,
+.pdflink
+{
+  position: fixed;
+  bottom: 2vmin;
+  width: 11vmin;
+  height: 11vmin;
+  cursor: pointer;
+}
+.pdflink {
+  right:2vmin;
+}
+.octocat{
+  right:14vmin;
+}
+.pdflink svg {
+width: 7vmin;
+height: 7vmin;
+margin: 2vmin;
+}
