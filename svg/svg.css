@@ -15,15 +15,19 @@ svg {
 .m2 text {
   font-size:4em;
   fill:gray;
+  stroke:none;
+  text-anchor: middle;
 }
 
-/* ------- les carrés principaux -------*/
-.guides {
-  fill: none;
-  stroke: gray;
+/* ------- les murs principaux -------*/
+.walls {
+  stroke: black;
+  stroke-width: 3;
+  fill : none;
 }
-.insearch .guides {
-  fill: none;
+.walls.ext{
+  fill: white;
+  fill-opacity: .7;
 }
 
 /* ------- les salles -------*/
@@ -31,21 +35,10 @@ svg {
   fill:#BFB;
   opacity:1;
 }
-.room.isnotok{
-  fill:#BFB;
-  opacity:.1;
-}
-.room.isok {
-  fill:#FBB;
-  opacity:1;
-}
 
 /* ------- les partie non accessibles -------*/
 .useless .room{
   fill: #EEE;
-}
-.useless .room.isnotok{
-  opacity:.1;
 }
 
 /* ------- les portes -------*/
@@ -70,10 +63,12 @@ svg {
   vector-effect:non-scaling-stroke;
 }
 .stairs rect {
-  stroke: gray;
+  stroke-width: 1;
+  stroke: black;
 }
 .stairs .updown {
-  stroke: darkGray;
+  stroke-width: 1;
+  stroke: black;
 }
 
 /* ------- noms des pièces -------*/
@@ -88,18 +83,3 @@ svg {
   font-weight: bold;
   font-size: 11px;
 }
-
-/* ------- M2 -------*/
-.building path {
-  fill: lightgoldenrodyellow;
-  stroke: lightGray;
-  stroke-width:3px;
-}
-.building-name {
-  font-size: 4em;
-  font-family: Impact, Charcoal, sans-serif;
-  fill: lightGray;
-  stroke: none;
-  text-anchor: middle;
-}
-

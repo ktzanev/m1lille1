@@ -38,14 +38,13 @@
   </def>
   <!-- le bâtiment M2 -->
   <g class="m2 n0">
-    <path d="M-50 -300 v160 h330 v70 h50 v-70 h10 v-60 h-10 v-100"></path>
+    <path d="M-50 -300 v160 h330 v35 h50 v-35 h10 v-60 h-10 v-100"></path>
     <rect x="220" y="-140" width="60" height="140"></rect>
-    <text class="room-name" x="250" y="-170">M2</text>
+    <text x="250" y="-170">M2</text>
   </g>
-  <!-- les carrés principaux: étage 0 -->
-  <g class="guides">
+  <!-- les murs principaux: étage 0 -->
+  <g class="walls ext">
     <rect x="0" y="0" width="500" height="500"></rect>
-    <rect x="100" y="120" width="300" height="260"></rect>
   </g>
   <!-- les salles: étage 0 -->
   <g class="rooms">
@@ -196,7 +195,7 @@
     <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
     <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
   </g>
-  <!-- les partie non accessibles: étage 0 -->
+  <!-- les parties non accessibles: étage 0 -->
   <g class="useless">
     <g class="room" data-room-name="">
       <rect x="100" y="120" width="50" height="50"></rect>

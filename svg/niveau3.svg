@@ -36,11 +36,9 @@
       <path d="M0 10 h80 M0 20 h80 M0 30 h80"></path>
     </g>
   </def>
-
-  <!-- les carrés principaux: étage 3 -->
-  <g class="guides">
-    <rect x="0" y="0" width="500" height="500"></rect>
-    <rect x="100" y="120" width="300" height="260"></rect>
+  <!-- les murs principaux: étage 3 -->
+  <g class="walls ext">
+    <path d="M500 350 h-50 v20 v-250 h-350 v260 h220 v120 h180 z"></path>
   </g>
   <!-- les salles: étage 3 -->
   <g class="rooms">
@@ -82,11 +80,8 @@
       <use xlink:href="#door" transform="translate(375 410)"></use>
     </g>
   </g>
-  <!-- les partie non accessibles: étage 3 -->
+  <!-- les parties non accessibles: étage 3 -->
   <g class="useless">
-    <g class="room" data-room-name="">
-      <path d="M0 0 h500 v350 h-50 v-230 h-350 v260 h220 v120 h-320 z"></path>
-    </g>
     <g class="room" data-room-name="">
       <rect x="100" y="120" width="50" height="50"></rect>
     </g>

@@ -38,14 +38,13 @@
   </def>
   <!-- le bâtiment M2 -->
   <g class="m2 n-1">
-    <path d="M-50 -300 v160 h330 v70 h50 v-70 h10 v-60 h-10 v-100"></path>
+    <path d="M-50 -300 v160 h330 v35 h50 v-35 h10 v-60 h-10 v-100"></path>
     <rect x="220" y="-140" width="60" height="140"></rect>
-    <text class="room-name" x="250" y="-170">M2</text>
+    <text x="250" y="-170">M2</text>
   </g>
-  <!-- les carrés principaux: étage -1 -->
-  <g class="guides">
+  <!-- les murs principaux: étage -1 -->
+  <g class="walls ext">
     <rect x="0" y="0" width="500" height="500"></rect>
-    <rect x="100" y="120" width="300" height="260"></rect>
   </g>
   <!-- les salles: étage -1 -->
   <g class="rooms">
@@ -113,15 +112,14 @@
 
     <g class="room" data-room-name="salle de La Vallée Poussin Vallee dlvp" data-room-floor="-1">
       <rect x="0" y="300" width="70" height="80"></rect>
-      <text class="room-name" x="35" y="330">salle<tspan x="35" dy="1em" class="main-name">de La Vallée</tspan>
-        <tspan x="35" dy="1em" class="main-name">Poussin</tspan></text>
+      <text class="room-name" x="35" y="330">salle<tspan x="35" dy="1em" class="main-name">de La Vallée</tspan><tspan x="35" dy="1em" class="main-name">Poussin</tspan></text>
       <use xlink:href="#door" transform="translate(70 305) rotate(90)"></use>
+      <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
     </g>
 
     <g class="room" data-room-name="salle Pascal" data-room-floor="-1">
       <rect x="0" y="380" width="50" height="120"></rect>
       <text class="room-name" x="25" y="440">salle<tspan x="25" dy="1em" class="main-name">Pascal</tspan></text>
-      <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
       <use xlink:href="#door" transform="translate(50 385) rotate(90)"></use>
     </g>
 
@@ -162,14 +160,14 @@
       <use xlink:href="#door" transform="translate(375 410)"></use>
     </g>
 
-  <!-- portes vers l'extérieur -->
-  <use xlink:href="#door2" transform="translate(235 0)"></use>
-  <use xlink:href="#door2" transform="translate(435 500) rotate(180)"></use>
-  <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
-  <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
-</g>
-<!-- les partie non accessibles: étage -1 -->
-<g class="useless">
+    <!-- portes vers l'extérieur -->
+    <use xlink:href="#door2" transform="translate(235 0)"></use>
+    <use xlink:href="#door2" transform="translate(435 500) rotate(180)"></use>
+    <use xlink:href="#door2" transform="translate(465 500) rotate(180)"></use>
+    <use xlink:href="#door2" transform="translate(495 500) rotate(180)"></use>
+  </g>
+  <!-- les parties non accessibles: étage -1 -->
+  <g class="useless">
     <g class="room" data-room-name="">
       <rect x="100" y="120" width="300" height="130"></rect>
     </g>
