@@ -586,7 +586,7 @@
     </div>
     <!-- ===================  Contrôles  =================== -->
     <div class="controls">
-      <input type="text" placeholder="Chercher" ng-model="search.name" autofocus></input>
+      <input type="text" placeholder="Chercher" ng-model="search.name" ng-keydown="($event.which==27) && (search.name='')"autofocus></input>
       <span class="clear" ng-show="search.name" ng-click="search.name=''"><span class="cross">X</span></span>
       <ul class="menu">
         <li ng-class="{selected:search.maxFloor==3, insearch:seach.name, nothere:!search[3]}" ng-click="search.maxFloor=3">niveau 3</li>
