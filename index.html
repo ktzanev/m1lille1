@@ -586,7 +586,7 @@
     </div>
     <!-- ===================  Contrôles  =================== -->
     <div class="controls">
-      <input type="text" placeholder="Chercher" ng-model="search.name" ng-keydown="($event.which==27) && (search.name='')"autofocus></input>
+      <input type="text" placeholder="Chercher" class="search" ng-model="search.name" ng-keydown="($event.which==27) && (search.name='')" autofocus></input>
       <span class="clear" ng-show="search.name" ng-click="search.name=''"><span class="cross">X</span></span>
       <ul class="menu">
         <li ng-class="{selected:search.maxFloor==3, insearch:seach.name, nothere:!search[3]}" ng-click="search.maxFloor=3">niveau 3</li>
@@ -595,6 +595,18 @@
         <li ng-class="{selected:search.maxFloor==0, insearch:seach.name, nothere:!search[0]}" ng-click="search.maxFloor=0">niveau 0</li>
         <li ng-class="{selected:search.maxFloor==-1, insearch:seach.name, nothere:!search[-1]}" ng-click="search.maxFloor=-1">niveau -1</li>
       </ul>
+      <div class="share">
+        <svg version="1.1" viewBox="0 0 16 16" ng-click="setShareURL()">
+          <g fill="black" fill-rule="evenodd" stroke="none" stroke-width="0">
+            <path d="M16,5 C16,3.895431 15.1045695,3 14,3 L9.25,3 L11.75,5 L14,5 L14,12 L4,12 L4,10 L2,8.4 L2,12 C2,13.104569 2.8954305,14 4,14 L14,14 C15.1045695,14 16,13.104569 16,12 L16,5 L16,5 Z M0,5 L5,9 L5,7.008289 C8.3326267,6.888012 10.3389388,8.372916 12.0331421,10.023071 C12.0331421,6.100762 8.5395674,3.011366 5,2.976794 L5,1 L0,5 L0,5 Z M0,5"/>
+          </g>
+        </svg>
+        <div ng-show="showsareurl">
+          <input type="text" readonly="readonly" id="shareurl" ng-model="shareurl" ng-click="selectShareURL()"></input>
+          <div class="hintshareurl">Ctrl-C pour copier</div>
+        </div>
+      </div>
+
     </div>
     <!-- ===================  Nord  =================== -->
     <div class="compass" ng-class="{nonorth:!north}" ng-click="north = !north" ng-init="north=true">

@@ -132,7 +132,8 @@
   width: 35vmin;
   padding: 1vmin;
   margin: 1vmin;
-
+}
+.controls input.search {
   font-family: Tahoma, Geneva, sans-serif;
   font-size:5vmin;
   text-align: center;
@@ -140,10 +141,21 @@
   border: 1px solid gray;
   border-radius: 7vmin;
 }
-.controls input:focus {
+.controls input.search:focus {
   outline: none;
   border-color: #FBB;
   box-shadow: 0 0 1vmin #FBB;
+}
+.controls input#shareurl {
+  direction:RTL;
+  padding: 7px;
+  border: #F7F7F7 solid 1px;
+  background: #EEE;
+  font-size: 3vmin;
+}
+.controls .hintshareurl {
+  font-size: 3vmin;
+  color: #F77;
 }
 .clear {
   position: absolute;
@@ -190,6 +202,11 @@
 }
 .controls .menu li.selected {
   background-color: #FBB;
+}
+/* --- partage --- */
+.controls .share svg {
+  width: 7vmin;
+  height: 7vmin;
 }
 
 /* --- boussole --- */

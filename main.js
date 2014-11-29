@@ -14,9 +14,27 @@ angular.module('planM3', [])
         this.q.maxFloor = f;
     }
 })
-.controller('mainCtrl', function($scope,findRoom){
+.controller('mainCtrl', function($scope, $timeout, findRoom){
   $scope.search = findRoom.q;
-  $scope.$watch('search.name',findRoom.resetFloors.bind(findRoom));
+  if (document.URL.search("[?]") >= 0)
+    $scope.search.name = document.URL.split("?").slice(-1)[0];
+  $scope.$watch('search.name',function() {
+    findRoom.resetFloors();
+    $scope.showsareurl = false;
+  });
+  $scope.setShareURL = function() {
+    $scope.shareurl=document.URL.split("?")[0];
+    if ($scope.search.name)
+      $scope.shareurl += "?"+$scope.search.name;
+    $scope.showsareurl = true;
+    $timeout($scope.selectShareURL, 0, false);
+  }
+  $scope.selectShareURL = function() {
+    document.getElementById('shareurl').select();
+    document.getElementById('shareurl').focus();
+  }
+
+
 })
 .directive('roomName', function(findRoom){
   return {
