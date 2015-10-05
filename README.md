@@ -5,7 +5,7 @@ Les plans du bâtiment M1 de l'université Lille 1.
 
 La version interactive (HTML5+CSS3+AngularJS)
 ----------------------------------------
-La version interactive des plans se trouve à l'adresse [ktzanev.github.io/m1lille1](http://ktzanev.github.io/m1lille1).
+La version interactive des plans se trouve à l'adresse [ktzanev.github.io/m1lille1](https://ktzanev.github.io/m1lille1/).
 Les sources de cette page web sont dans la branche `gh-pages`.
 Elle a été créée avec l'aide de la bibliothèque [AngulagJS](http://angularjs.org).
 
