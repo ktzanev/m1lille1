@@ -48,7 +48,7 @@
       <use xlink:href="#door" transform="translate(170 240) rotate(-90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre" data-room-floor="2">
+    <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre Painleve" data-room-floor="2">
       <rect x="170" y="250" width="230" height="130"></rect>
       <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Painlevé</tspan></text>
       <use xlink:href="#door" transform="translate(170 260) rotate(-90) scale(-1 1)"></use>

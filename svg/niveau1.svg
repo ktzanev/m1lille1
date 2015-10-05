@@ -49,9 +49,9 @@
       <use xlink:href="#door2" transform="translate(400 200) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Chatelet amphitheatre" data-room-floor="1">
+    <g class="room" data-room-name="amphithéâtre Châtelet amphitheatre Chatelet" data-room-floor="1">
       <rect x="170" y="250" width="230" height="130"></rect>
-      <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Chatelet</tspan></text>
+      <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Châtelet</tspan></text>
       <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
       <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
     </g>

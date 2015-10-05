@@ -19,7 +19,7 @@ La version PDF
 --------------
 La [version PDF](http://ktzanev.github.io/m1lille1/m1lille1.pdf) a été créé de la façon suivante :
 
-* les fichiers `svg` ont été enregistrés en `pdf` à l'aide du navigateur Chrome (imprimer sous PDF sans marges).
+* les fichiers `svg` ont été enregistrés en `pdf` à l'aide du navigateur Chrome (imprimer sous PDF en A4 *sans marges*).
 * le fichier `m1lille1.tex` a été compilé avec xelatex.
 
 

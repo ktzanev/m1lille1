@@ -48,15 +48,15 @@
   </g>
   <!-- les salles: étage 0 -->
   <g class="rooms">
-    <g class="room" data-room-name="amphithéâtre Cauchy" data-room-floor="0">
+    <g class="room" data-room-name="amphithéâtre Cauchy amphitheatre" data-room-floor="0">
       <rect x="170" y="120" width="160" height="130"></rect>
       <text class="room-name" x="250" y="185">amphithéâtre<tspan x="250" dy="1em" class="main-name">Cauchy</tspan></text>
       <use xlink:href="#door" transform="translate(170 245) rotate(-90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Chatelet" data-room-floor="0">
+    <g class="room" data-room-name="amphithéâtre Châtelet amphitheatre Chatelet" data-room-floor="0">
       <rect x="170" y="250" width="160" height="130"></rect>
-      <text class="room-name" x="250" y="315">amphithéâtre<tspan x="250" dy="1em" class="main-name">Chatelet</tspan></text>
+      <text class="room-name" x="250" y="315">amphithéâtre<tspan x="250" dy="1em" class="main-name">Châtelet</tspan></text>
       <use xlink:href="#door" transform="translate(170 255) rotate(-90) scale(-1 1)"></use>
     </g>
 
