@@ -33,7 +33,9 @@ angular.module('planM3', [])
     document.getElementById('shareurl').select();
     document.getElementById('shareurl').focus();
   }
-
+  if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+    document.getElementById("ctrlcmd").innerHTML = "Cmd";
+  }
 
 })
 .directive('roomName', function(findRoom){
