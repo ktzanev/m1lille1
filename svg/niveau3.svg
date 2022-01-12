@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/css" href="svg.css" ?>
+<?xml-stylesheet type="text/css" href="svg.css"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="plan" viewBox="-5 -305 510 810" width="510" height="810">
   <!-- les définitions -->
   <def>
@@ -44,27 +44,39 @@
   <g class="rooms">
     <g class="room" data-room-name="amphithéâtre Galois amphitheatre" data-room-floor="3">
       <rect x="170" y="120" width="230" height="130"></rect>
-      <text class="room-name" x="285" y="185">amphithéâtre<tspan x="285" dy="1em" class="main-name">Galois</tspan></text>
+      <text class="room-name" x="285" y="185">
+        amphithéâtre
+        <tspan x="285" dy="1em" class="main-name">Galois</tspan>
+      </text>
       <use xlink:href="#door2" transform="translate(400 140) rotate(90)"></use>
       <use xlink:href="#door2" transform="translate(400 200) rotate(90)"></use>
     </g>
 
     <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre Painleve" data-room-floor="3">
       <rect x="170" y="250" width="230" height="130"></rect>
-      <text class="room-name" x="285" y="315">amphithéâtre<tspan x="285" dy="1em" class="main-name">Painlevé</tspan></text>
+      <text class="room-name" x="285" y="315">
+        amphithéâtre
+        <tspan x="285" dy="1em" class="main-name">Painlevé</tspan>
+      </text>
       <use xlink:href="#door2" transform="translate(400 270) rotate(90)"></use>
       <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
     </g>
 
     <g class="room" data-room-name="salle 304" data-room-floor="3">
       <rect x="100" y="170" width="50" height="70"></rect>
-      <text class="room-name" x="125" y="205">salle<tspan x="125" dy="1em" class="main-name">304</tspan></text>
+      <text class="room-name" x="125" y="205">
+        salle
+        <tspan x="125" dy="1em" class="main-name">304</tspan>
+      </text>
       <use xlink:href="#door" transform="translate(150 190) rotate(90)"></use>
     </g>
 
     <g class="room" data-room-name="salle 302" data-room-floor="3">
       <rect x="100" y="310" width="70" height="70"></rect>
-      <text class="room-name" x="135" y="345">salle<tspan x="135" dy="1em" class="main-name">302</tspan></text>
+      <text class="room-name" x="135" y="345">
+        salle
+        <tspan x="135" dy="1em" class="main-name">302</tspan>
+      </text>
       <use xlink:href="#door" transform="translate(165 310) scale(1 -1) rotate(180)"></use>
     </g>
 

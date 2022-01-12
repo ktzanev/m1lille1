@@ -94,3 +94,7 @@ svg {
   font-weight: bold;
   font-size: 11px;
 }
+.room-name .room-number {
+  fill:black;
+  font-size: 10px;
+}

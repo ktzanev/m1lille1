@@ -1,16 +1,19 @@
 \documentclass{article}
-\usepackage[paperwidth=140mm,paperheight=210mm, margin=0mm]{geometry}
+\usepackage[paperwidth=140mm,paperheight=210mm, margin=0mm,bottom=2.1mm]{geometry}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue,
+pdftitle={Plans du bâtiment M1 de l'Université de Lille - FST}, pdfauthor={Kroum Tzanev}}
 \pagestyle{empty}
 
 % ----- macro pour les niveaux -----
 \newcommand{\niveau}[1]{
 \clearpage
 \begin{center}
-  \includegraphics[trim=0mm 67mm 67mm 0mm, clip, width=110mm]{niveau#1.pdf}
-  \par\vspace{1cm}
+  \includegraphics[trim=7mm 7mm 7mm 7mm, clip, width=110mm]{niveau#1.pdf}\\
   {\Huge \textsc{niveau #1}}
 \end{center}
+\vfill\hfill\tiny\texttt{\url{https://ktzanev.github.io/m1lille1}}
 }
 
 \begin{document}
@@ -18,10 +21,10 @@
 % ----- titre -----
 \begin{center}
 \vspace*{\fill}
-{\Huge \textsc{b\^atiment M1}}
+{\Huge \textsc{bâtiment M1}}
 
 \vspace{1cm}
-{\Large Universit\'e Lille 1}
+{\Large Université de Lille - FST}
 \vspace*{\fill}
 \end{center}
 
@@ -30,6 +33,6 @@
 \niveau{0}
 \niveau{1}
 \niveau{2}
-\niveau{3}
+\niveau{3}~
 
 \end{document}
