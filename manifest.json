@@ -1,0 +1,47 @@
+{
+  "name": "Bâtiment M1 - Université de Lille",
+  "short_name": "M1-Lille",
+  "description": "Les plans du bâtiment M1 (mathématiques) de l'université de Lille (FST, Villeneuve d'Ascq). Auteur: Kroum Tzanev.",
+  "display": "standalone",
+  "scope": "/m1lille1/",
+  "start_url": "/m1lille1/",
+  "theme_color": "#223",
+  "background_color": "#223",
+  "icons": [{
+            "src": "images/m1_72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/m1_96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/m1_128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/m1_192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/m1_384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/m1_512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

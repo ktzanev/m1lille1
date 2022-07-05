@@ -1,4 +1,4 @@
-angular.module('planM3', [])
+angular.module('planM1', [])
 .service('findRoom', function() {
     this.q = {name:'', re:'', '-1':true, '0':true, '1':true, '2':true, '3':true, maxFloor:3};
     this.resetFloors = function() {
@@ -71,3 +71,25 @@ angular.module('planM3', [])
     }
   };
 }); // end directive
+
+
+// ---------------------------
+// PWA
+// ---------------------------
+
+// Register the service worker
+if ('serviceWorker' in navigator) {
+  // Wait for the 'load' event to not block other work
+  window.addEventListener('load', async () => {
+    // Try to register the service worker.
+    try {
+      const reg = await navigator.serviceWorker.register(
+        '/m1lille1/pwa_sw.js',
+        {scope: '/m1lille1/'}
+      );
+      console.log('PWA service worker registered! 😎', reg);
+    } catch (err) {
+      console.log('😥 PWA service worker registration failed: ', err);
+    }
+  });
+}
