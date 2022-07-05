@@ -6,7 +6,7 @@ Les plans du bâtiment M1 de la Faculté des Sciences et Technologies de l'Unive
 
 La version interactive des plans se trouve à l'adresse [ktzanev.github.io/m1lille1](https://ktzanev.github.io/m1lille1/). Elle a été créée avec l'aide de la bibliothèque [AngulagJS](http://angularjs.org).
 
-## Le fichiers originaux (SVG)
+## Les fichiers originaux (SVG)
 
 Les SVG contenant les plans se trouve dans le répertoire `svg`.
 Ils étaient créés à la main à partir des plans de sécurité qui se trouvent dans le bâtiment.
@@ -23,3 +23,11 @@ La [version PDF](https://ktzanev.github.io/m1lille1/m1lille1.pdf) a été créé
 ## Numérotation des salles
 
 Les salles ont été numérotés en 2019. Vous pouvez trouvez plus d'informations sur cette question dans [la page dédiée](numeros-des-salles.md).
+
+## Utilisation hors ligne
+
+Tous les calculs sont effectués dans le navigateur. Aucune information n'est envoyée sur un serveur. Il s'agit d'une page [PWA](https://fr.wikipedia.org/wiki/Progressive_web_app) qui peut être installée et exécutée sans connexion internet.
+
+## Licence
+
+[MIT](LICENCE)
