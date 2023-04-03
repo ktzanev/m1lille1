@@ -9,7 +9,7 @@
 
 for FIL in ../svg/niveau*.svg; do
   pdfname="${FIL%.*}" # remove .svg
-  pdfname="pdf/${pdfname##*/}.pdf"  # svg/
+  pdfname="${pdfname##*/}.pdf"  # svg/
   echo $pdfname
   wkhtmltopdf --page-height 170mm --page-width 105mm "$FIL" "$pdfname"
 done

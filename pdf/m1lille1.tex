@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[paperwidth=140mm,paperheight=210mm, margin=0mm,bottom=2.1mm]{geometry}
 \usepackage{graphicx}
+\usepackage[style=iso]{datetime2}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue,
 pdftitle={Plans du bâtiment M1 de l'Université de Lille - FST}, pdfauthor={Kroum Tzanev}}
@@ -13,7 +14,7 @@ pdftitle={Plans du bâtiment M1 de l'Université de Lille - FST}, pdfauthor={Kro
   \includegraphics[trim=7mm 7mm 7mm 7mm, clip, width=110mm]{niveau#1.pdf}\\
   {\Huge \textsc{niveau #1}}
 \end{center}
-\vfill\hfill\tiny\texttt{\url{https://ktzanev.github.io/m1lille1}}
+\vfill\tiny~~\texttt{\today}\hfill\texttt{\url{https://ktzanev.github.io/m1lille1}}
 }
 
 \begin{document}
