@@ -48,7 +48,7 @@
   </g>
   <!-- les salles: étage 0 -->
   <g class="rooms">
-    <g class="room" data-room-name="amphithéâtre Cauchy amphitheatre" data-room-floor="0">
+    <g class="room" data-room-name="amphithéâtre Augustin-Louis Cauchy amphitheatre" data-room-floor="0">
       <rect x="170" y="120" width="160" height="130"></rect>
       <text class="room-name" x="250" y="185">
         amphithéâtre
@@ -57,7 +57,7 @@
       <use xlink:href="#door" transform="translate(170 245) rotate(-90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Châtelet amphitheatre Chatelet" data-room-floor="0">
+    <g class="room" data-room-name="amphithéâtre Albert Châtelet amphitheatre Chatelet" data-room-floor="0">
       <rect x="170" y="250" width="160" height="130"></rect>
       <text class="room-name" x="250" y="315">
         amphithéâtre
@@ -66,7 +66,7 @@
       <use xlink:href="#door" transform="translate(170 255) rotate(-90) scale(-1 1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Salez" data-room-floor="0">
+    <g class="room" data-room-name="salle Pierre Salez" data-room-floor="0">
       <rect x="330" y="120" width="70" height="130"></rect>
       <text class="room-name" x="365" y="185">
         salle
@@ -83,7 +83,7 @@
       <use xlink:href="#door" transform="translate(400 350) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Borel 015" data-room-floor="0">
+    <g class="room" data-room-name="salle Émile Borel 015" data-room-floor="0">
       <rect x="0" y="0" width="50" height="130"></rect>
       <text class="room-name" x="25" y="65">
         salle
@@ -93,29 +93,23 @@
       <use xlink:href="#door" transform="translate(50 100) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="secrétariat IREM secretariat" data-room-floor="0">
-      <rect x="50" y="0" width="50" height="90"></rect>
-      <text class="room-name" x="75" y="45">
-        secrétariat
-        <tspan x="75" dy="1em" class="main-name">IREM</tspan>
+    <g class="room" data-room-name="salle Sophie Germain 019" data-room-floor="0">
+      <rect x="50" y="0" width="100" height="90"></rect>
+      <text class="room-name" x="100" y="45">
+        salle
+        <tspan x="100" dy="1em" class="main-name">Germain</tspan>
+        <tspan x="100" dy="1em" class="room-number">[019]</tspan>
       </text>
       <use xlink:href="#door" transform="translate(70 90)  scale(1-1)"></use>
-    </g>
-
-    <g class="room" data-room-name="bibliothèque IREM bibliotheque" data-room-floor="0">
-      <rect x="100" y="0" width="50" height="90"></rect>
-      <text class="room-name" x="125" y="45">
-        bibliothèque
-        <tspan x="125" dy="1em" class="main-name">IREM</tspan>
-      </text>
       <use xlink:href="#door" transform="translate(110 90)  scale(1-1)"></use>
     </g>
 
-    <g class="room" data-room-name="bibliothèque CAPES bibliotheque" data-room-floor="0">
+    <g class="room" data-room-name="salle Maryam Mirzakhani 021" data-room-floor="0">
       <rect x="150" y="0" width="70" height="90"></rect>
       <text class="room-name" x="185" y="45">
-        bibliothèque
-        <tspan x="185" dy="1em" class="main-name">CAPES</tspan>
+        salle
+        <tspan x="185" dy="1em" class="main-name">Mirzakhani</tspan>
+        <tspan x="185" dy="1em" class="room-number">[021]</tspan>
       </text>
       <use xlink:href="#door" transform="translate(160 90)  scale(1-1)"></use>
     </g>
@@ -129,7 +123,7 @@
       <use xlink:href="#door" transform="translate(290 90)  scale(1-1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Cartan" data-room-floor="0">
+    <g class="room" data-room-name="salle Élie Cartan" data-room-floor="0">
       <rect x="320" y="0" width="80" height="90"></rect>
       <text class="room-name" x="360" y="45">
         salle
@@ -160,7 +154,7 @@
       <use xlink:href="#door" transform="translate(70 215) rotate(90) scale(-1 1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Riesz 011" data-room-floor="0">
+    <g class="room" data-room-name="salle Frigyes Riesz 011" data-room-floor="0">
       <rect x="0" y="220" width="70" height="60"></rect>
       <text class="room-name" x="35" y="250">
         salle
@@ -170,7 +164,7 @@
       <use xlink:href="#door" transform="translate(70 225) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Gauss" data-room-floor="0">
+    <g class="room" data-room-name="salle Carl Friedrich Gauss" data-room-floor="0">
       <rect x="0" y="300" width="70" height="80"></rect>
       <text class="room-name" x="35" y="340">
         salle
@@ -180,7 +174,7 @@
       <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Clairin" data-room-floor="0">
+    <g class="room" data-room-name="salle Gabriel Clairin" data-room-floor="0">
       <rect x="0" y="380" width="70" height="120"></rect>
       <text class="room-name" x="35" y="440">
         salle
@@ -189,7 +183,7 @@
       <use xlink:href="#door" transform="translate(70 385) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Lévy Levy 003" data-room-floor="0">
+    <g class="room" data-room-name="salle Paul Lévy Levy 003" data-room-floor="0">
       <rect x="70" y="410" width="90" height="90"></rect>
       <text class="room-name" x="115" y="455">
         salle
@@ -200,7 +194,7 @@
       <use xlink:href="#door" transform="translate(135 410)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Bernoulli amphitheatre 001" data-room-floor="0">
+    <g class="room" data-room-name="amphithéâtre Jacob Bernoulli amphitheatre 001" data-room-floor="0">
       <rect x="160" y="410" width="160" height="90"></rect>
       <text class="room-name" x="240" y="455">
         amphithéâtre
@@ -211,7 +205,7 @@
       <use xlink:href="#door" transform="translate(310 410) scale(-1 1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Dirichlet 027" data-room-floor="0">
+    <g class="room" data-room-name="salle Johann Peter Gustav Lejeune Dirichlet 027" data-room-floor="0">
       <rect x="450" y="250" width="50" height="80"></rect>
       <text class="room-name" x="475" y="290">
         salle

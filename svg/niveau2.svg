@@ -42,7 +42,7 @@
   </g>
   <!-- les salles: étage 2 -->
   <g class="rooms">
-    <g class="room" data-room-name="amphithéâtre Galois amphitheatre" data-room-floor="2">
+    <g class="room" data-room-name="amphithéâtre Évariste Galois amphitheatre" data-room-floor="2">
       <rect x="170" y="120" width="230" height="130"></rect>
       <text class="room-name" x="285" y="185">
         amphithéâtre
@@ -51,7 +51,7 @@
       <use xlink:href="#door" transform="translate(170 240) rotate(-90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Painlevé amphitheatre Painleve" data-room-floor="2">
+    <g class="room" data-room-name="amphithéâtre Paul Painlevé amphitheatre Painleve" data-room-floor="2">
       <rect x="170" y="250" width="230" height="130"></rect>
       <text class="room-name" x="285" y="315">
         amphithéâtre

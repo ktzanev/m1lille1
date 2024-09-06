@@ -42,7 +42,7 @@
   </g>
   <!-- les salles: étage 1 -->
   <g class="rooms">
-    <g class="room" data-room-name="amphithéâtre Cauchy amphitheatre" data-room-floor="1">
+    <g class="room" data-room-name="amphithéâtre Augustin-Louis Cauchy amphitheatre" data-room-floor="1">
       <rect x="170" y="120" width="230" height="130"></rect>
       <text class="room-name" x="285" y="185">
         amphithéâtre
@@ -52,7 +52,7 @@
       <use xlink:href="#door2" transform="translate(400 200) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="amphithéâtre Châtelet amphitheatre Chatelet" data-room-floor="1">
+    <g class="room" data-room-name="amphithéâtre Albert Châtelet amphitheatre Chatelet" data-room-floor="1">
       <rect x="170" y="250" width="230" height="130"></rect>
       <text class="room-name" x="285" y="315">
         amphithéâtre

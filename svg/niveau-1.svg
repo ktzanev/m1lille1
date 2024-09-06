@@ -48,7 +48,7 @@
   </g>
   <!-- les salles: étage -1 -->
   <g class="rooms">
-    <g class="room" data-room-name="amphithéâtre Archimède amphitheatre Archimede" data-room-floor="-1">
+    <g class="room" data-room-name="amphithéâtre Archimède amphitheatre Archimede de Syracuse" data-room-floor="-1">
       <rect x="170" y="250" width="230" height="130"></rect>
       <text class="room-name" x="285" y="315">
         amphithéâtre
@@ -58,7 +58,7 @@
       <use xlink:href="#door2" transform="translate(400 330) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Lebesgue 21" data-room-floor="-1">
+    <g class="room" data-room-name="salle Henri Lebesgue 21" data-room-floor="-1">
       <rect x="0" y="0" width="50" height="130"></rect>
       <text class="room-name" x="25" y="65">
         salle
@@ -68,7 +68,7 @@
       <use xlink:href="#door" transform="translate(50 100) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Lie 23" data-room-floor="-1">
+    <g class="room" data-room-name="salle Sophus Lie 23" data-room-floor="-1">
       <rect x="50" y="0" width="60" height="90"></rect>
       <text class="room-name" x="80" y="45">
         salle
@@ -78,7 +78,7 @@
       <use xlink:href="#door" transform="translate(60 90)  scale(1-1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Newton 25/27" data-room-floor="-1">
+    <g class="room" data-room-name="salle Isaac Newton 25/27" data-room-floor="-1">
       <rect x="110" y="0" width="110" height="90"></rect>
       <text class="room-name" x="165" y="45">
         salle
@@ -89,7 +89,7 @@
       <use xlink:href="#door" transform="translate(210 90)  scale(-1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Riemann 29" data-room-floor="-1">
+    <g class="room" data-room-name="salle Bernhard Riemann 29" data-room-floor="-1">
       <rect x="280" y="0" width="60" height="90"></rect>
       <text class="room-name" x="310" y="45">
         salle
@@ -99,7 +99,7 @@
       <use xlink:href="#door" transform="translate(290 90)  scale(1-1)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Weierstrass 31" data-room-floor="-1">
+    <g class="room" data-room-name="salle Karl Weierstrass 31" data-room-floor="-1">
       <rect x="340" y="0" width="60" height="90"></rect>
       <text class="room-name" x="370" y="45">
         salle
@@ -121,7 +121,7 @@
       <use xlink:href="#door" transform="translate(70 165) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Noether Hilbert Euler 17" data-room-floor="-1">
+    <g class="room" data-room-name="salle Emmy Noether David Hilbert Leonhard Euler 17" data-room-floor="-1">
       <rect x="0" y="190" width="70" height="110"></rect>
       <text class="room-name" x="35" y="245">
         salle
@@ -131,7 +131,7 @@
       <use xlink:href="#door" transform="translate(70 245) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle de La Vallée Poussin Vallee dlvp 15" data-room-floor="-1">
+    <g class="room" data-room-name="salle Charles-Jean de La Vallée Poussin Vallee dlvp 15" data-room-floor="-1">
       <rect x="0" y="300" width="70" height="80"></rect>
       <text class="room-name" x="35" y="330">
         salle
@@ -143,7 +143,7 @@
       <use xlink:href="#door" transform="translate(70 355) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Pascal 11" data-room-floor="-1">
+    <g class="room" data-room-name="salle Blaise Pascal 11" data-room-floor="-1">
       <rect x="0" y="380" width="50" height="120"></rect>
       <text class="room-name" x="25" y="440">
         salle
@@ -153,7 +153,7 @@
       <use xlink:href="#door" transform="translate(50 385) rotate(90)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Fatou 09" data-room-floor="-1">
+    <g class="room" data-room-name="salle Pierre Fatou 09" data-room-floor="-1">
       <rect x="50" y="410" width="60" height="90"></rect>
       <text class="room-name" x="80" y="455">
         salle
@@ -163,7 +163,7 @@
       <use xlink:href="#door" transform="translate(75 410)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Hermite 07" data-room-floor="-1">
+    <g class="room" data-room-name="salle Charles Hermite 07" data-room-floor="-1">
       <rect x="110" y="410" width="70" height="90"></rect>
       <text class="room-name" x="145" y="455">
         salle
@@ -173,7 +173,7 @@
       <use xlink:href="#door" transform="translate(120 410)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Hadamard 03/05" data-room-floor="-1">
+    <g class="room" data-room-name="salle Jacques Hadamard 03/05" data-room-floor="-1">
       <rect x="180" y="410" width="70" height="90"></rect>
       <text class="room-name" x="215" y="455">
         salle
@@ -184,7 +184,7 @@
       <use xlink:href="#door" transform="translate(230 410)"></use>
     </g>
 
-    <g class="room" data-room-name="salle Demartres 01" data-room-floor="-1">
+    <g class="room" data-room-name="salle René Demartres 01" data-room-floor="-1">
       <rect x="250" y="410" width="70" height="90"></rect>
       <text class="room-name" x="285" y="455">
         salle
